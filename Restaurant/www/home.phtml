@@ -1,0 +1,30 @@
+<main class="menu">
+    
+        <article class="intro"> 
+            
+            <div>
+                <h3>Nos valeurs</h3>
+                <p>A <span>Champi</span>, notre cuisine est totalement dédiée aux champignons de saison. Nos plats sont <span>frais</span>, <span>riches en vitamines</span>, amour et minéraux. Ils ont été minutieusement élaborés pour être gourmands, tout en restant <span>d'authentiques champions de la nutrition</span> !</p>
+                <a href="#">En savoir plus</a>
+            </div>
+        </article>
+        
+    <h2>Carte du jour</h2>
+
+    <!--
+    <h3 id="mot-chef">"Tant que vous vous faites plaisir, tout va bien." </h3> <img id="toque" src="www/images/cook.png">
+    -->
+    
+    <article>
+        <table class="meals">
+            <?php foreach ($meals as $meal): ?>
+                <tr>
+                    <td><img src="www/images/<?=$meal['photo']?>"</td>   
+                    <td id="titre"><?=$meal['nom']?></td>   
+                    <td id="description"><?=$meal['description']?></td> 
+                    <td id="prix"><?=number_format($meal['prix'],2)?>&nbsp€ </td> 
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </article>
+</main>

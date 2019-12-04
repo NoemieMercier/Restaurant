@@ -1,0 +1,31 @@
+<main>
+
+<?php if(isAdmin()):?> <!--On sécurise la table-->
+
+<table>
+    <tr>
+        <th>Id article</th>
+        <th>Nom</th>
+        <th>Quantité</th>
+        <th>Prix unitaire</th>
+        <th>Prix total</th>
+    </tr>
+        <?php foreach ($getDetails as $detail) :?>
+    <tr>
+        <td><?= $detail['id_meal'] ?></td>
+        <td><?= $detail['nom'] ?></td>
+        <td><?= $detail['quantite'] ?></td>
+        <td><?= $detail['prix_unite'] ?></td>
+        <td><?= $detail['quantite'] * $detail['prix_unite'] ?></td>
+    </tr>            
+        <?php endforeach; ?>
+
+        <!--$getDetails=getDetailsOrderById($idurl);
+        $getidcmd=getIdUserOnCmd ($idurl);
+        $getuserid=getUserById ($getidcmd['id_user']);-->
+    
+</table>
+
+<?php endif; ?>
+ 
+</main>

@@ -1,0 +1,45 @@
+<main class="editMeal">
+
+<?php if(isset($_GET['id'])): ?>
+
+<!--Formulaire pré-rempli-->
+<h2>Modifier mon petit plat</h2>
+    
+    <form action="index.php?action=modifMeal&id=<?=$_GET['id']?>" method="post" enctype="multipart/form-data">
+        <fieldset>
+                <legend> Caractéristiques</legend>  
+                <br>
+                Nom  <input name="nom" type="text" value="<?= $idmeal['nom']?>"><br><br>
+                Description <textarea name="description"> <?= $idmeal['description']?></textarea><br>
+        </fieldset><br>
+        <fieldset>
+                <legend> Approvisionnement</legend>  
+                <br>
+                Prix de vente <input name="prix" type="text" value="<?= $idmeal['prix']?>" €><br><br>
+        </fieldset>        
+                <button id="edit" type="submit" name="submit">Modifier</button>
+                <button id="cancel" name="cancel">Annuler</button>
+        </fieldset>
+    </form>
+
+<?php else: ?>
+
+<!--Liste de plats-->
+    <article id='article'>
+        <table>
+            <?php foreach ($meals as $meal): ?>
+                <tr>
+                    <td><img src="www/images/<?=$meal['photo']?>"></td>   
+                    <td id="titre"><?=$meal['nom']?></td>   
+                    <td id="description"><?=$meal['description']?></td> 
+                    <td id="prix"><?=number_format($meal['prix'],2)?> €</td> 
+                    <td id="icon-modif"><a href="index.php?action=modifMeal&id=<?=$meal['id']?>"><i class="fas fa-pencil-alt"></i></a></td>
+                    <td id="icon-cancel"><a href="index.php?action=cancelMeal&id=<?=$_GET['id'];?>"><i class="fas fa-times"></i></a></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </article>
+
+<?php endif; ?>
+</main>
+

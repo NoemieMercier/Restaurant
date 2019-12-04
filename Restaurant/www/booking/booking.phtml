@@ -1,0 +1,40 @@
+    <main class="reservation">
+
+    <h2>Réservation d'une table</h2>  
+   
+    <form action="index.php?action=booking" method="post">
+        <fieldset>
+        <legend>Informations</legend>
+        <br>
+        <div>
+            <div>
+            <label>Date de réservation</label>
+            <input name="date" type="date" value=<?=date("Y-m-d")?>><br><br> 
+            </div>
+            
+            <div>
+            à <select name="heure" id="heure">
+        <?php for($i=12;$i<=20;$i++):  ?> 
+                <option value= "<?=$i?>"><?=$i?></option>
+        <?php endfor; ?>
+            </select>  
+            <select name="minutes" id="minutes">
+        <?php for($i=00;$i<=45;$i++):  ?> 
+                <option value= "<?=$i?>"><?= $i ?></option>
+        <?php endfor; ?>
+            </select>  
+        <br>            
+            <div>        <br>
+            <label>Nombre de couverts </label>
+            <input name="couverts" type="text"><br><br>
+            </div>
+    </fieldset>
+        
+        <br>
+        <br>
+  
+            <button id="reserver" type="submit">Réserver</button>
+            <button id="cancel">Annuler</button>
+    </fieldset>
+    </form>
+</main>

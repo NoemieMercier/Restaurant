@@ -1,0 +1,14 @@
+Models (la requête)
+
+Il fiat des requête.
+Là on a GetMeals, qui est une requête de sélectionne. 
+Donc besoin de se connecter à la bdd
+
+Controllers (contrôle)
+
+listMeal récupère les info de la requête de model. 
+appel au template pour l'affichage de la requête dans home.phtml
+
+
+Le fichier qui déclenche la fonction : index.php = moteur
+Réveille la métode listMeal()

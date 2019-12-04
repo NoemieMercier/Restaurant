@@ -1,0 +1,420 @@
+h1 a{
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    opacity:0.7;
+    text-shadow:0.5, black;
+    font-size:76px;
+    padding-bottom:50px;
+    text-decoration:none;
+    text-align:right;
+    box-sizing: border-box;
+    display: inline-block;
+    
+    /*animation*/
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid #849a61; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: 2px; /* Adjust as needed */
+ 	animation: typing 1.5s steps(6, end), 
+ 	blink .75s step-end infinite;
+    }
+
+/* The typing effect */
+
+@keyframes typing {
+    from { 
+        width: 0% 
+    }
+    to { 
+        width: 100% 
+    }
+}
+
+@keyframes blink {
+    from, to { 
+        border-color: transparent 
+    }
+    50% { 
+        border-color: #849a61; 
+    }
+} 
+
+h2{
+    font-family: 'Roboto', sans-serif;
+    color:white;
+    font-size:30px;
+    background-color:#849a61;
+    opacity:0.7;
+    padding:20px 30px;
+    border-radius:10px;
+    text-align:center;
+    margin-bottom:50px;
+}
+
+nav {
+    display:flex;
+    padding-right : 20px;
+    justify-content:center;
+}
+
+.navbar {
+    display:flex;
+}
+
+.carte {
+    display:none;
+}
+
+#create-admin, #admin-in, .carte{
+    padding:10px 20px;
+    border-radius:5px;
+    margin:auto;
+    text-decoration:none;
+    color:#1e150e;
+    font-family: 'Roboto', sans-serif;
+}
+
+#create-admin {
+    background-color:#849a61;
+    opacity:0.65;
+    color:white;
+}
+
+#admin-in {
+    margin-left:8px;
+    background-color:white;
+    color:#335e1a;
+    font-weight:bold;
+    opacity:0.7;
+}
+
+#admin-out{
+    background-color: white;
+    opacity:0.75;
+    padding:10px 20px;
+    border-radius:5px;
+    margin:auto;
+    text-decoration:none;
+    color:black;
+    font-family: 'Roboto', sans-serif;
+}
+
+#cancel-commande {
+    background-color: grey;
+    opacity:0.75;
+    color:white;  
+    border:none;
+    padding: 5px 10px;
+    border-radius:10px;
+}
+
+#valider-commande {
+    background-color: #849a61;
+    opacity:0.75;
+    color:white;  
+    border:none;
+    padding: 5px 10px;
+    border-radius:10px;
+}
+
+/*
+#mot-chef {
+    font-size:20px;
+    color:#849a61;
+}
+*/
+
+#toque {
+    width:50px;
+}
+
+.flex-menu {
+   padding-top:20px; 
+}
+
+.intro {
+    background-image:url("../images/handchampi.jpg");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    opacity:0.9;
+    border-radius:10px;
+}
+
+.intro div {
+    padding:30px;
+    background-color:black;
+    color:white;
+    opacity:0.8;
+    border-radius:10px;
+    
+}
+
+.intro h3 {  
+    font-size:32px;
+    font-weight:bold;
+    border-radius:10px;
+    padding:10px 20px;
+}
+
+.intro span {
+    color:#849a61;
+    font-size:16px;
+    opacity:0.9;
+}
+
+.intro p {
+    font-size:16px;
+    text-align:center;
+    color:white;
+    font-weight:italic;
+}
+
+.intro a {
+    text-decoration:none;
+    background-color:#79482b;
+    font-weight:bold;
+    border-radius:10px;
+    padding:10px 20px;
+    opacity:0.7;
+    color:white;
+    font-size:16px;
+    
+}
+
+.meals td img {
+    border-radius:15%;
+
+}
+
+.menu{
+    font-family: 'Roboto', sans-serif;
+    color:#849a61;
+    font-size:26px;
+    text-align:center;
+    padding:50px;
+}
+
+#menu h3 {
+    color:white;
+}
+
+.fab{
+    font-size:40px;
+    color:#849a61;
+    padding-right:20px;
+}
+
+footer div {
+    margin-top:50px;
+    display:flex;
+    justify-content:center;
+}
+
+img {
+    width:200px;
+    padding:25px;
+    border-radius:5px;
+}
+
+
+
+.menu #titre {
+    font-weight:bold;
+    font-size:22px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+
+.menu #description {
+    font-size:18px;
+    padding-left:20px;
+    padding-right:20px
+
+}
+
+.menu #prix{
+    font-weight:bold;
+    font-size:18px;
+    padding-left:20px;
+    padding-right:20px;
+}
+
+.menu #prix:hover{
+    color:white;
+}
+
+.menu table{
+    border-collapse:collapse;
+}
+
+.menu tr:hover {
+    border-radius:10px;
+    background-color:black;
+    opacity:0.5;
+    color:white;
+}
+
+fieldset {
+    margin-top:30px;
+    font-family: 'Roboto', sans-serif; 
+    display:block;
+    color:#849a61;
+}
+
+legend {
+    font-weight:bold;
+    color:#849a61;
+}
+
+#flex-form1{
+    display:flex;
+    flex-direction:column;
+    
+}
+
+#flex-form1 input{
+    display:flex;
+    flex-direction:row;
+}
+
+label {
+    color:#849a61;
+}
+
+#submit, #reserver, #commander {
+    font-family: 'Roboto', sans-serif;
+    background-color:#849a61;
+    color:white;
+    opacity:0.75;
+    padding:10px 20px;
+    border-radius:5px;
+    margin-right:5px;
+    border:none;
+    text-decoration:none;
+    margin-bottom:8px;
+}
+
+#tb-bord, #deconnect{
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+    opacity:0.6;
+    color:black;
+    padding:10px 20px;
+    border-radius:5px;
+    margin-right:5px;
+    border:none;
+    text-decoration:none;   
+}
+
+#cancel {
+    background-color:black; 
+    opacity:0.75;
+    color:white;
+    padding:10px 10px;
+    border-radius:5px;
+    border:none;
+    margin-bottom:8px;
+}
+
+input, textarea, select{
+    margin-left:30px;
+}
+
+footer {
+    border-top:1px solid black; 
+    padding-bottom:15px;
+}
+
+footer p {
+    font-family: 'Roboto', sans-serif;
+    font-size:12px; 
+    margin:auto;
+    color:black; 
+}
+
+#footer-flex {    
+    display:flex;
+    margin:auto;
+}
+
+#layout main .fab{
+    color:#ff0000;
+    font-size:12px;
+}
+
+nav h3{
+    font-family: 'Roboto', sans-serif;
+    color:black;
+    opacity:0.8;
+    font-weight:bold;
+    display:block;
+    padding-right:50px;
+    margin-top:-3px;
+   
+}
+
+header {
+    padding-top : 30px;
+    padding-right:15px;
+    padding-left:15px;
+    padding-bottom :300px;
+    background-image:url("../images/mush");
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    text-align:center;
+    display:flex;
+    flex-direction:row;
+    justify-content : space-between;
+}
+
+#add-product, #edit-product, #show-bookings, #show-orders{
+    background-color:black; 
+    opacity:0.7;
+    color:white;
+    font-family: 'Roboto', sans-serif;
+    padding:5px 10px;
+    border-radius:10px;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:20px;
+
+}
+
+.editMeal #article tr{
+    font-family: 'Roboto', sans-serif;
+    background-color:white;
+    opacity:0.7;  
+}
+
+.editMeal #article tr:hover{
+    font-family: 'Roboto', sans-serif;
+    opacity:1;  
+}
+
+.fa-pencil-alt{
+    color:#82a768;
+}
+
+.fa-times{
+    color:#f83f29;
+}
+
+
+
+@media (min-width: 768px) { 
+
+
+}
+
+@media (min-width: 920px) { 
+    
+.intro {
+    display:show;
+}
+
+}
+

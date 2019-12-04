@@ -1,0 +1,40 @@
+
+    <main id=#order>
+    <h2>Passer une commande</h2>
+    
+<!--form 1 -->     
+    <form>
+        <fieldset class="cmd">
+        <legend>Ajouter un article</legend>
+        <select name="products" id="products">
+        
+        <?php foreach ($getmeals as $getmeal) :?>
+          <option value="<?= $getmeal['id']?>" ><?= $getmeal['nom']?> </option>
+          <?php endforeach; ?>
+        </select>
+        
+        <div id="product-details">
+        <img src="">
+        <p></p>
+        <strong></strong>
+        </div><br>
+        <input type="number" name="quantite" id='quantite' min="0" max="30">
+        <input type="button" name="ajouter" id="ajouter" value="Ajouter"></button>
+    </fieldset>
+    </form><br>
+
+<!--form 2 --> 
+    <fieldset>
+    <legend>Détails de votre commande</legend>
+    <form id="form-valid-panier">
+        <table id="panier">
+        </table>
+    <input type="button" name="valider-commande" id="valider-commande" value="Gimme manger !"></button>
+    <input type="button" name="cancel" id="cancel-commande" value="Je réflechis encore"></button>
+    </fieldset>
+
+</form>
+
+
+</main>
+ 

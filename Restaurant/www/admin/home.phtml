@@ -1,0 +1,24 @@
+<main>
+
+<?php if(isAdmin()):?>
+
+        <a href="index.php?action=addMeal" id="add-product">Ajouter un produit</a>
+        <a href="index.php?action=modifMeal" id="edit-product">Modifier un produit</a>
+        <a href="index.php?action=affResa" id="show-bookings">Afficher la liste des réservations</a>
+        <a href="index.php?action=affCmd" id="show-orders">Afficher la liste des commandes</a>
+
+<?php else:?>
+ 
+    <form action="index.php?action=admin" method="post">
+        <fieldset>
+                <legend><i class="fas fa-lock"></i> Mon compte administrateur</legend>  
+                <br>
+                E-mail  <input name="email" type="email"><br><br>
+                Mot de passe <input name="password" type="password"><br><br>
+                <button id="submit" type="submit">Connexion</button>
+                <button id="cancel">Annuler</button>
+        </fieldset>
+    </form>
+    
+    <?php endif; ?>
+</main>

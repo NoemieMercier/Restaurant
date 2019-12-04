@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Mansalva|Roboto&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Knewave|Love+Ya+Like+A+Sister|Rock+Salt&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="www/css/style.css">
+    <title>Restaurant</title>
+</head>
+<body id="layout">
+    <header>
+        
+        <h1><a href="index.php?">Champi</a></h1>
+
+        <nav id="menu">
+    
+    <?php if(isAdmin()): ?>
+    
+            <h3>Bonjour, <?=$_SESSION['admin']['prenom']?></h3>
+            <div>
+            <a href="index.php?action=admin" id="tb-bord">Tableau de bord</a><br>
+            </div>
+            <div>
+            <a href="index.php?action=disconnect" id="deconnect">Déconnecter</a>
+            </div>
+                     
+ 
+    
+            <!--s'affiche si user identifié -->
+            <?php elseif (is_connect()):?>
+            
+
+            <h3>Bonjour, <?=$_SESSION['user']['prenom']?></h3>
+            <div>
+            <a href="index.php?action=booking" id="reserver">Réserver</a><br>
+            </div>
+            <div>
+            <a href="index.php?action=commander" id="commander">Commander</a>
+            </div>
+            <div>
+            <a href="index.php?action=disconnect" id="admin-out">Se déconnecter</a>
+            </div>
+            
+            <div class="flex-menu">
+                <div>
+                    <?php else : ?>
+                    <!--s'affiche si user pas identifié -->
+                    <div>
+                        <a href="index.php?action=create_account" id="create-admin">Créer un compte</a><br>
+                    </div>
+                    <div>
+                        <a href="index.php?action=connexion" id="admin-in">Connexion</a>
+                    </div>
+                </div>
+            
+                <?php endif ?>
+                <div class="navbar">
+                    <div>
+                        <a href="#" class="carte">Notre histoire</a><br>
+                    </div>
+                    <div>
+                        <a href="#" class="carte">Nos valeurs</a>
+                    </div>
+                    <div>
+                        <a href="#" class="carte">Carrières</a>
+                    </div>
+                    <div>
+                        <a href="#" class="carte">Nous contacter</a>
+                    </div>
+                </div>
+                
+            </div>
+    </header>
+    
+    <main>
+        
+        <?php if(isset($message)): ?>
+        <p> <?= $message ?> </p> 
+        <?php endif;?>
+        
+        <?php include $template ?>
+        
+    </main>
+    
+    <footer>
+    <div>
+    <p> 2019, tous droits réservés.</p>
+    <div id="footer-flex">
+    <i class="fab fa-cc-visa"></i><i class="fab fa-cc-mastercard"></i><i class="fab fa-cc-paypal"></i>
+    </div>
+
+    
+    </footer>
+    
+        <!--SCRIPTS JS-->
+        <script src="www/js/valid_Action_Cmd.js"></script>
+</body>
+</html>
+
+
+    <!--<i class="fab fa-facebook"></i> 
+    <i class="fab fa-instagram"></i>-!>

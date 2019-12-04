@@ -1,0 +1,20 @@
+<!--Formulaire pré-rempli
+<h2>Modifier mon petit plat</h2>
+    
+    <form action="index.php?id=<?=//$meal['id']?>" method="post" enctype="multipart/form-data">
+        <fieldset>
+                <legend> Caractéristiques</legend>  
+                <br>
+                Nom  <input name="nom" type="text" value="<?=//$meal['nom']?>"><br><br>
+                Description <textarea name="description" value="<?=//$meal['description']?>"></textarea><br>
+                Photo <input name="photo" type="file" value="<?=//$meal['photo']?>"><br><br>
+        </fieldset>
+        <fieldset>
+                <legend> Approvisionnement</legend>  
+                <br>
+                Prix de vente <input name="prix" type="text" value="<?=//$meal['prix']?>" €<br><br>
+        </fieldset>        
+                <button id="edit" type="submit">Modifier</button>
+                <button id="cancel">Annuler</button>
+        </fieldset>
+    </form>

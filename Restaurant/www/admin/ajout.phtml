@@ -1,0 +1,24 @@
+<main>
+
+    <h2>Ajout d'un bon petit plat</h2>
+    
+    <form action="index.php?action=addMeal" method="post" enctype="multipart/form-data">
+        <fieldset>
+                <legend> Caractéristiques</legend>  
+                <br>
+                Nom  <input name="nom" type="text"><br><br>
+                Description <textarea name="description"></textarea><br>
+                Photo <input name="photo" type="file"><br><br>
+        </fieldset>
+        <fieldset>
+                <legend> Approvisionnement</legend>  
+                <br>
+                Prix de vente <input name="prix" type="text"> €<br><br>
+        </fieldset>        
+                <button id="submit" type="submit">Ajouter</button>
+                <button id="cancel">Annuler</button>
+        </fieldset>
+    </form>
+    
+
+</main>

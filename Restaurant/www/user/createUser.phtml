@@ -1,0 +1,84 @@
+
+    <main class="create-user">
+
+    <h2> <i class="fas fa-user-friends"></i> Création d'un compte client </h2>  
+   
+    <form action="index.php?action=create_account" method="post">
+        <fieldset>
+        <legend><i class="fas fa-home"></i> Identité et coordonnées</legend>
+        <br>
+        <div id="form1">
+            <div>
+            <label>Nom</label>
+            <input name="nom" type="text"><br><br>
+            </div>
+            
+            <div>
+            <label>Prénom</label>
+            <input name="prenom" type="text"><br><br>
+            </div>
+            
+            <div>
+            <label>Date de naissance</label>
+            <select name="jour" id="jour">
+        <?php for($i=1;$i<=31;$i++):  ?> 
+                <option value= "<?=$i?>"><?= $i ?></option>
+        <?php endfor; ?>
+            </select>  
+            <select name="mois">
+                <option value="1">janvier</option>
+                <option value="2">février</option>
+                <option value="3">mars</option>
+                <option value="4">avril</option>
+                <option value="5">mai</option>
+                <option value="6">juin</option>
+                <option value="7">juillet</option>
+                <option value="8">août</option>
+                <option value="9">septembre</option>
+                <option value="10">octobre</option>
+                <option value="11">novembre</option>
+                <option value="12">décembre</option>
+            </select>  
+            <select name="annee" id="annee">
+                <?php for($i=1940;$i<date('Y')-18;$i++):  ?> 
+                 <option value="<?= $i ?>"><?= $i ?></option>
+                <?php endfor; ?>
+            </select><br><br><br>
+            </div>
+            
+            <div>
+            <label>Adresse </label>
+            <textarea name="adresse"></textarea><br><br>
+            </div>
+            
+            <div>
+            <label>Code postal </label> 
+            <input name="code_postal" type="text"><br><br>
+            </div>
+            
+            <div>
+            <label>Ville</label>
+            <input name="ville" type="text"><br><br>
+            </div><br>
+            
+            <div>
+            <label>Téléphone </label>
+            <input name="phone" type="text"><br><br>
+            </div>
+        </div>
+        
+    </fieldset>
+        
+        <br>
+        <br>
+         
+    <fieldset>
+            <legend><i class="fas fa-phone-alt"></i>Informations d'authentification</legend>  
+            <br>
+            E-mail  <input name="email" type="email"><br><br>
+            Mot de passe <input name="password" type="password"><br><br>
+            <button id="submit" type="submit">Créer le compte</button>
+            <button id="cancel">Annuler</button>
+    </fieldset>
+    </form>
+</main>

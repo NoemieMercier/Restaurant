@@ -1,0 +1,25 @@
+<main>
+
+<?php if(isAdmin()):?> <!--On sécurise la table-->
+
+<table>
+    <tr>
+        <th>Num. Client</th>
+        <th>Nom. Client</th>
+        <th>Date</th>
+        <th>Prix total</th>
+    </tr>
+        <?php foreach ($cmdlist as $cmd) :?>
+    <tr>
+        <td><a href="index.php?action=affCmd&id=<?= $cmd['id'] ?>"><?= $cmd['id'] ?></a></td>
+        <td><?= $cmd['nom'] ?><?= $cmd['prenom'] ?></td>
+        <td><?= $cmd['date'] ?></td>
+        <td><?= $cmd['prix_total'] ?></td>
+    </tr>            
+        <?php endforeach; ?>
+    
+</table>
+
+<?php endif; ?>
+ 
+</main>
